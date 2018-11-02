@@ -8,6 +8,7 @@ package com.mycompany.processingformes.formes.mostraformes;
 import com.mycompany.processingformes.formes.Ball;
 import com.mycompany.processingformes.formes.Circle;
 import com.mycompany.processingformes.formes.Pala;
+import com.mycompany.processingformes.formes.Rectangulo;
 import java.awt.Color;
 import java.awt.Point;
 import processing.core.PApplet;
@@ -20,6 +21,7 @@ public class MostraFormes extends PApplet {
 
     private Circle circle;
     private Pala pala;
+    private Ball ball;
 
   
     
@@ -35,16 +37,26 @@ public class MostraFormes extends PApplet {
         pala = new Pala (this, Color.BLUE, new Point(150, 150), 100, 20);
         background(0);
     }
+    
 
     @Override
     public void draw() {
         background(0);
         circle.dibuixa();
         pala.move();
+        //choce();
         pala.dibuixa();
+        System.out.println(pala.getP());
+        System.out.println(circle.getP());
+        
+        if(pala.getP() = circle.getP()){
+            circle.getSpeedx() *= -1;
+        }
         
     }
 
+    
+    
     public static void main(String[] args) {
         String[] processingArgs = {"Pilota"};
         MostraFormes pilota = new MostraFormes();
