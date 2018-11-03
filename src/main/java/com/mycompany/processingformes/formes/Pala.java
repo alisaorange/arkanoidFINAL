@@ -25,10 +25,7 @@ public class Pala extends Rectangulo {
         
         
         setP(new Point(xP, yP));
-                //{
-          // this.p = xP;
-           //this.yP = yP;
-    //}
+                
         
         
     }
