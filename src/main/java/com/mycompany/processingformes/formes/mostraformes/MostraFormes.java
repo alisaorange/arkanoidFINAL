@@ -23,40 +23,44 @@ public class MostraFormes extends PApplet {
     private Pala pala;
     private Ball ball;
 
-  
-    
     @Override
     public void settings() {
         size(800, 600);
-        
+
     }
 
     @Override
     public void setup() {
         circle = new Ball(this, Color.red, new Point(100, 100), 20);
-        pala = new Pala (this, Color.BLUE, new Point(150, 150), 100, 20);
+        pala = new Pala(this, Color.BLUE, new Point(150, 150), 100, 20);
         background(0);
     }
-    
+
+    //@Override
+    public void setSpeedx(int speedx) {
+        if (pala.getP() = circle.getP()) {
+            this.getSpeedx() *= -1;
+        } else {
+            System.out.println("OK");
+        }
+         
+    }
 
     @Override
     public void draw() {
         background(0);
         circle.dibuixa();
         pala.move();
-        //choce();
         pala.dibuixa();
+
         System.out.println(pala.getP());
         System.out.println(circle.getP());
-        
-        if(pala.getP() = circle.getP()){
-            circle.getSpeedx() *= -1;
-        }
-        
+
+        //if(pala.getP() = circle.getP()){
+        //  circle.getSpeedx() *= -1;
+        //  }
     }
 
-    
-    
     public static void main(String[] args) {
         String[] processingArgs = {"Pilota"};
         MostraFormes pilota = new MostraFormes();
