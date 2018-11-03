@@ -38,8 +38,8 @@ public class MostraFormes extends PApplet {
 
     //@Override
     public void setSpeedx(int speedx) {
-        if (pala.getP() = circle.getP()) {
-            this.getSpeedx() *= -1;
+        if (pala.getP() = circle.getP()) {  //unexpected type
+            this.getSpeedx() *= -1;         //unexpected type   РУГАЕТСЯ
         } else {
             System.out.println("OK");
         }
