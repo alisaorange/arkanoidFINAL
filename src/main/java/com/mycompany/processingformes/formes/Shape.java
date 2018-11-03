@@ -17,6 +17,9 @@ public abstract class Shape {
     private Color c;
     private Point p;
     protected static PApplet papplet;
+    
+    private Pala pala;
+    private Ball ball;
 
     public Shape(PApplet papplet, Color c, Point p) {
         this.c = c;
@@ -41,6 +44,8 @@ public abstract class Shape {
         this.p = p;
     }
 //</editor-fold>
+    
+  
     
     public abstract double area();
     
