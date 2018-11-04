@@ -36,15 +36,6 @@ public class MostraFormes extends PApplet {
         background(0);
     }
 
-    //@Override
-   // public void setSpeedx(int speedx) {
-        //if (pala.getP() = circle.getP()) {  //unexpected type
-            //this.getSpeedx() *= -1;         //unexpected type   РУГАЕТСЯ
-        //} else {
-           /// System.out.println("OK");
-        //}    
-    //}
-
     @Override
     public void draw() {
         background(0);
@@ -56,9 +47,9 @@ public class MostraFormes extends PApplet {
         System.out.println(circle.getP());
         System.out.println(circle.getSpeedx());
 
-        //if(pala.getP() = circle.getP()){
-        //  circle.getSpeedx() *= -1;
-        //  }
+       if(pala.getP().getX() == circle.getP().getX()){
+         circle.setSpeedx(circle.getSpeedx() * -1);
+          }
     }
 
     public static void main(String[] args) {
