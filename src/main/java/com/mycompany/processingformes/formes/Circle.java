@@ -44,7 +44,12 @@ public class Circle extends Shape {
         if ((yC > papplet.height - radi) || (yC < radi)) {
             speedy *= -1;
         }
+        
         //Если у шара и палы точки равны
+        if( xC = pala.getP().getX() - radi){  
+            speedx *= -1;
+        }
+        
         
         
         this.setP(new Point(xC+speedx,yC+speedy)); 
