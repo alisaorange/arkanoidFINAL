@@ -46,9 +46,9 @@ public class Circle extends Shape {
         }
         
         //Если у шара и палы точки равны
-        if( xC == pala.getP().getX()){  
-            speedx *= -1;
-        }
+        //if( xC == pala.getP().getX()){  
+         //   setSpeedx(getSpeedx() * -1);
+        //}
         
         
         
