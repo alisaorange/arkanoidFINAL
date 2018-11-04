@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Point;
 import processing.core.PApplet;
 
+
 /**
  *
  * @author kolos
@@ -19,13 +20,14 @@ public class Pala extends Rectangulo {
         int xP = papplet.mouseX;
             if(xP >= papplet.width-(int)getAnchura()){
                xP = papplet.width-(int)getAnchura();
-            } 
-           
+            }        
         int yP = papplet.height-(int)getAltura();
+        
+       
         
         
         setP(new Point(xP, yP));
-                
+        
         
         
     }
