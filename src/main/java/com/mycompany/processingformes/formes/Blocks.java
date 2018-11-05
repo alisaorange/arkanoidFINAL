@@ -12,18 +12,6 @@ import processing.core.PApplet;
  */
 public class Blocks extends Rectangulo {
     
-    private boolean exist = true; 
-
-    public boolean isExist() {
-        return exist;
-    }
-
-    public void setExist(boolean exist) {
-        this.exist = exist;
-    }
-    
-    
-    
     public Blocks(PApplet papplet, Color c, Point p, float anchura, float altura) {
         super(papplet, c, p, anchura, altura);
     }
