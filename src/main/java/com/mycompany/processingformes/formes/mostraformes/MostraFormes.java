@@ -28,7 +28,6 @@ public class MostraFormes extends PApplet {
     //String message = "this text is spinning";
     
     private int points = 0;
-    
     private double lifes = 10;
     
 
@@ -40,11 +39,11 @@ public class MostraFormes extends PApplet {
 
     @Override
     public void setup() {
-        circle = new Ball(this, Color.red, new Point(100, 100), 20);
+        circle = new Ball(this, Color.red, new Point(100, 100), 10);
         pala = new Pala(this, Color.BLUE, new Point(150, 150), 100, 20);
         background(0);
-        blocks = new Blocks(this, Color.BLUE, new Point(100, 100), 200, 10);
-        blocks1 = new Blocks(this, Color.BLUE, new Point(450, 100), 200, 10);
+        blocks = new Blocks(this, Color.GREEN, new Point(100, 100), 100, 10);
+        blocks1 = new Blocks(this, Color.GREEN, new Point(450, 100), 100, 10);
         
     }
 
@@ -80,23 +79,23 @@ public class MostraFormes extends PApplet {
     
     //условие если мяч косается блока, он пропалает 
     if((circle.getP().getX() >= blocks.getP().getX()) 
-            && (circle.getP().getX() <= blocks.getP().getX() + 200) 
-            && circle.getP().getY() + circle.getRadi() == blocks.getP().getY() + 10){
+            && (circle.getP().getX() <= blocks.getP().getX() + 100) 
+            && ((circle.getP().getY() - circle.getRadi() == blocks1.getP().getY() + 10) || (circle.getP().getY() + circle.getRadi() == blocks1.getP().getY()))){
               //блок исчезает 
               //blocks.setC(Color.black);
-              blocks.setP(new Point(0, -200));
+              blocks.setP(new Point(-200, -200));
               points = points +1;  //при попадание по блоку +1 балл
           }
     //Блок 2. Надо придумать как создать много блоков (использовать цикл for)
      if((circle.getP().getX() >= blocks1.getP().getX()) 
-            && (circle.getP().getX() <= blocks1.getP().getX() + 200) 
-            && circle.getP().getY() + circle.getRadi() == blocks1.getP().getY() + 10){
+            && (circle.getP().getX() <= blocks1.getP().getX() + 100) 
+            && ((circle.getP().getY() - circle.getRadi() == blocks1.getP().getY() + 10) || (circle.getP().getY() + circle.getRadi() == blocks1.getP().getY()))){
               //блок исчезает 
-              blocks1.setP(new Point(0, -200));
+              blocks1.setP(new Point(-200, -200));
               points = points +1;
           }
     //Если мяч не попадает по ракетке -1 жизнь.
-    if(circle.getP().getY() + circle.getRadi() == height){
+    if( (circle.getP().getY() + circle.getRadi() == height) && ((circle.getP().getY() + circle.getRadi() - 1) == (height -1) )) { //500
         lifes = lifes - 0.5; //почему то вычиет 2 жизни, разобраться!!!
     }
   }
