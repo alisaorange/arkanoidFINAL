@@ -22,7 +22,7 @@ public class Pala extends Rectangulo {
                xP = papplet.width-(int)getAnchura();
             }        
         //int yP = papplet.height-(int)getAltura();
-        int yP = papplet.height - 400;
+        int yP = papplet.height - 50;
        
         
         
