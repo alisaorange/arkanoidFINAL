@@ -15,12 +15,4 @@ public class Ball extends Circle {
         super(papplet, c, p, radi);
     }
      
-   //public void choce(){
-       //if(pala.getP() = ball.getP()){
-      //    ball.getSpeedx() *= -1;
-       //}
-    //}
-   
-   
-    
 }
