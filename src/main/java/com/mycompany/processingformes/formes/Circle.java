@@ -27,8 +27,25 @@ public class Circle extends Shape {
         this.speedx = speedx;
     }
 
+    public int getSpeedy() {
+        return speedy;
+    }
+
+    public void setSpeedy(int speedy) {
+        this.speedy = speedy;
+    }
+
+
     public Circle(PApplet papplet, Color c, Point p, float radi) {
         super(papplet, c, p);
+        this.radi = radi;
+    }
+
+    public float getRadi() {
+        return radi;
+    }
+
+    public void setRadi(float radi) {
         this.radi = radi;
     }
 
