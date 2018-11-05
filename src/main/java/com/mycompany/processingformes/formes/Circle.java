@@ -16,8 +16,8 @@ import processing.core.PApplet;
 public class Circle extends Shape {
 
     private float radi;
-    private int speedx = 5;
-    private int speedy = 5;
+    private int speedx = 2;
+    private int speedy = 2;
 
     public int getSpeedx() {
         return speedx;
@@ -62,13 +62,7 @@ public class Circle extends Shape {
             speedy *= -1;
         }
         
-        //Если у шара и палы точки равны
-        //if( xC == pala.getP().getX()){  
-         //   setSpeedx(getSpeedx() * -1);
-        //}
-        
-        
-        
+  
         this.setP(new Point(xC+speedx,yC+speedy)); 
         papplet.ellipse(xC, yC, 2 * radi, 2 * radi);
     }
